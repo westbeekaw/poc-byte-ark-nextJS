@@ -1,8 +1,5 @@
 import { ByteArkPlayerContainer } from "byteark-player-react";
-import type {
-  ByteArkPlayerContainerProps,
-  ByteArkPlayer,
-} from "byteark-player-react";
+import type { ByteArkPlayerContainerProps } from "byteark-player-react";
 
 const VIDEO_SOURCE_URL =
   "https://tcctechuprwieg.stream-playlist.byteark.com/streams/UPvCYWWDPd93/playlist.m3u8";

@@ -1,17 +1,11 @@
 "use client";
 import { ByteArkPlayerContainer } from "byteark-player-react";
 import type { ByteArkPlayerContainerProps } from "byteark-player-react";
-import { useEffect, useState } from "react";
 
 const VIDEO_SOURCE_URL =
   "https://tcctechuprwieg.stream-playlist.byteark.com/streams/UPvCYWWDPd93/playlist.m3u8";
 
 export default function VideoTestPage() {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
   const options: ByteArkPlayerContainerProps = {
     fluid: true,
     autoplay: "any",
@@ -47,10 +41,6 @@ export default function VideoTestPage() {
       });
     },
   };
-
-  if (!isClient) {
-    return null; // or a loading indicator
-  }
 
   return <ByteArkPlayerContainer {...options} />;
 }
